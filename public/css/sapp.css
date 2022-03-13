@@ -1,0 +1,86 @@
+.custom-logo {
+  font-size: 24px;
+  color: #fcb045;
+}
+
+.custom-nav-element-add {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 60%;
+  cursor: pointer;
+}
+.custom-nav-element-add .overlay {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: rgba(252, 176, 69, 0.2);
+  display: grid;
+  place-items: center center;
+}
+.custom-nav-element-add .overlay i {
+  font-size: 22px;
+  color: rgba(252, 176, 69, 0.8);
+}
+
+.articles-container {
+  width: 100%;
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.articles-container .article-container {
+  margin-block: 8px;
+  padding: 16px;
+  border: 1px solid #94bbe9;
+  display: flex;
+}
+.articles-container .article-container > * {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding-inline: 8px;
+  display: flex;
+  justify-content: center;
+}
+.articles-container .article-container > *:last-child {
+  border-right: none;
+}
+.articles-container .article-container .article-author-details {
+  flex: 2;
+  flex-direction: column;
+}
+.articles-container .article-container .article-content {
+  flex: 9;
+}
+.articles-container .article-container .article-options {
+  flex: 1;
+  align-self: center;
+  justify-content: space-around;
+}
+.articles-container .article-container .article-options .article-option-delete {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: grid;
+  place-items: center center;
+}
+.articles-container .article-container .article-options .article-option-delete i {
+  color: rgba(253, 29, 29, 0.8);
+  font-size: 20px;
+}
+.articles-container .article-container .article-options .article-option-edit {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: grid;
+  place-items: center center;
+}
+.articles-container .article-container .article-options .article-option-edit i {
+  color: rgba(34, 139, 34, 0.8);
+  font-size: 20px;
+}
+
+.add-article-form .article-input {
+  resize: none;
+}

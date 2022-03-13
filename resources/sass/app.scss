@@ -1,0 +1,105 @@
+.custom-logo {
+    font-size: 24px;
+    color: #fcb045;
+}
+
+.custom-nav-element-add {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 60%;
+    cursor: pointer;
+
+    .overlay {
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+        background-color: rgba(252, 176, 69, 0.2);
+        display: grid;
+        place-items: center center;
+
+        i {
+            font-size: 22px;
+            color: rgba(252, 176, 69, 0.8);
+        }
+    }
+}
+
+.articles-container {
+    width: 100%;
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .article-container {
+        margin-block: 8px;
+        padding: 16px;
+        border: 1px solid #94bbe9;
+        display: flex;
+
+        & > * {
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            padding-inline: 8px;
+            display: flex;
+            justify-content: center;
+
+            &:last-child {
+                border-right: none;
+            }
+        }
+
+        .article-author-details {
+            flex: 2;
+            flex-direction: column;
+        }
+
+        .article-content {
+            flex: 9;
+        }
+
+        .article-options {
+            flex: 1;
+            align-self: center;
+            justify-content: space-around;
+
+            .article-option-delete {
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+                display: grid;
+                place-items: center center;
+
+                i {
+                    color: rgba(253, 29, 29, 0.8);
+                    font-size: 20px;
+                }
+            }
+
+            .article-option-edit {
+                width: 32px;
+                height: 32px;
+                cursor: pointer;
+                display: grid;
+                place-items: center center;
+
+                i {
+                    color: rgba(34, 139, 34, 0.8);
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.add-article-form {
+    .article-input {
+        resize: none;
+    }
+
+    .form-actions {
+        .post-button {
+        }
+    }
+}

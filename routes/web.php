@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->middleware(['auth'])->name('home');
+
+Route::get('/add', function () {
+    return view('add-article');
+})->middleware(['auth'])->name('add-article');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
