@@ -1,4 +1,4 @@
-<form class="add-article-form" method="POST" action="/store-tweet">
+<form class="add-article-form" method="POST" action="">
   @csrf
   <div class="form-content">
     <h2 class="form-content-title">Your tweet :</h2>

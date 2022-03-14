@@ -1,11 +1,11 @@
-@php
-  $articles = [1, 2, 3];
-@endphp
+@props(['tweets'])
+
+
 <div class="articles-container">
 
-@foreach ($articles as $article)
+@foreach ($tweets as $tweet)
 
-<x-article />
+<x-article :tweet="$tweet" />
 
 @endforeach
 </div>

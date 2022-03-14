@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TweetsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->middleware(['auth'])->name('home');
+Route::get('/', [TweetsController::class, 'index'])->middleware(['auth'])->name('home');
 
-Route::get('/add', function () {
-    return view('add-article');
-})->middleware(['auth'])->name('add-article');
+Route::get('/add', [TweetsController::class, 'addTweet'])->middleware(['auth'])->name('add-article');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::post('/store-tweet', [TweetsController::class, 'store'])->middleware(['auth']);
+
+Route::get('/delete-tweet/{id}', [TweetsController::class, 'destroy'])->middleware(['auth']);
+
+Route::get('/update-tweet/{id}', [TweetsController::class, 'getUpdate'])->middleware(['auth']);
+
+Route::post('/update-tweet/{id}', [TweetsController::class, 'update'])->middleware(['auth']);
+
+
 
 require __DIR__.'/auth.php';

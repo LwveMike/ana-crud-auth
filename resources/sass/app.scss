@@ -38,6 +38,7 @@
         padding: 16px;
         border: 1px solid #94bbe9;
         display: flex;
+        width: 1200px;
 
         & > * {
             border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -94,12 +95,38 @@
 }
 
 .add-article-form {
+    width: 46%;
+    margin: 128px auto;
     .article-input {
         resize: none;
     }
 
+    .form-content {
+        .form-content-title {
+            font-size: 26px;
+            color: rgba(252, 176, 69, 1);
+            font-weight: 600;
+        }
+    }
+
     .form-actions {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding: 10px;
         .post-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(252, 176, 69, 1);
+            display: grid;
+            place-items: center center;
+
+            i {
+                font-size: 20px;
+                color: black;
+                margin-right: 2px;
+            }
         }
     }
 }

@@ -1,28 +1,33 @@
+@props(['tweet'])
 
 <div class="article-container">
   <div class="article-author-details">
     <div class="article-author-name">
-      Author : lwvemike
+      Author : {{ $tweet['owner']->name }}
     </div>
     <div class="article-author-time">
-      Posted At : 3/12/2022
+      Posted At : {{ $tweet['created_at']->format('H-i-s')}}
     </div>
   </div>
 
   <div class="article-content">
     <div class="article-body">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero eaque architecto dolorum, magni vitae esse voluptatibus sapiente rem eveniet debitis.
+      {{ $tweet['body']}}
     </div>
 
   </div>
 
+
+  @if (Auth::user()->id == $tweet['owner']->id)
   <div class="article-options">
-    <div class="article-option-edit">
+    <a class="article-option-edit" href="/update-tweet/{{$tweet['id']}}">
       <i class="fas fa-edit"></i>
-    </div>
+</a>
 
-    <div class="article-option-delete">
+    <a class="article-option-delete" href="/delete-tweet/{{$tweet['id']}}">
      <i class="fa fa-trash"></i>
-    </div>
+</a>
   </div>
+
+  @endif
 </div>

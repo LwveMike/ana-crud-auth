@@ -10,7 +10,7 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="/home" active="true">
+                    <x-nav-link href="/" active="true">
                         {{ __('Ana Special Twitter') }}
                     </x-nav-link>
                 </div>

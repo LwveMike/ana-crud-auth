@@ -36,6 +36,7 @@
   padding: 16px;
   border: 1px solid #94bbe9;
   display: flex;
+  width: 1200px;
 }
 .articles-container .article-container > * {
   border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -81,6 +82,34 @@
   font-size: 20px;
 }
 
+.add-article-form {
+  width: 46%;
+  margin: 128px auto;
+}
 .add-article-form .article-input {
   resize: none;
+}
+.add-article-form .form-content .form-content-title {
+  font-size: 26px;
+  color: #fcb045;
+  font-weight: 600;
+}
+.add-article-form .form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10px;
+}
+.add-article-form .form-actions .post-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fcb045;
+  display: grid;
+  place-items: center center;
+}
+.add-article-form .form-actions .post-button i {
+  font-size: 20px;
+  color: black;
+  margin-right: 2px;
 }
